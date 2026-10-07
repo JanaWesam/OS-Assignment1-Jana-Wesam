@@ -29,10 +29,10 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
+| **Full Name** | Jana Wesam Alaghbar |
+| **Student ID** | 446052702 |
+| **University Email** | 446052702@std.psau.edu.sa |
+| **GitHub Username** | JanaWesam |
 | **Repository Link** | [Paste your repository link here] |
  
 ---
@@ -129,29 +129,29 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 6,2026]
+**What I did**:Prepared the GitHub repository and updated my StudentID
 
-**Details**:
+**Details**:I created and prepared my GitHub repository for the assignment and opened the starter project.I updated the StudentID value in SchedulerSimulation.java with my actual StudentID and committed the change
 
-**Challenges**:
+**Challenges**:GitHub was new to me, so I was confused about how to setup the repository and make the required changes
 
-**Solution**:
+**Solution**:I followed the setup steps carefully and checked the repository and program to make sure the changes were saved correctly
 
-**Time spent**:
+**Time spent**: 30 minutes
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 7,2026]
+**What I did**:Implemented Feature 1:Process Priority
 
-**Details**:
+**Details**:I added priority field to each process with a random value from 1 to 10.I updated the process creation and ready queue output to display the priority. I tested the program and checked that the priority appeared correctly in the output .I also corrected the output so that ms appeared with the burst time and not with the priority.Finally, I committed the completed feature to GitHub 
 
-**Challenges**:
+**Challenges**:I had difficulty using Visual Studio Code because I was not familiar with the environment and how to work with the Java project
 
-**Solution**:
+**Solution**:I learned how to open and run the java project in Visual Studio Code, and tested the program to make sure it worked correctly
 
-**Time spent**:
+**Time spent**:Approximately 3 hours
 
 ---
 
