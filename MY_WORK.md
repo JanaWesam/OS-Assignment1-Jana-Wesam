@@ -155,16 +155,16 @@
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 8,2026]
+**What I did**:I worked on Feature 2:Context Switch Counter
 
-**Details**:
+**Details**:I added a counter to count the context switches. I also added a line to show the total number at the end of the program. I ran the program and the result was 25 context switches.
 
-**Challenges**:
+**Challenges**:I was not sure when the counter should increase during the scheduling process
 
-**Solution**:
+**Solution**: I checked where a process starts running and placed the counter there. Then I ran the program and checked the result
 
-**Time spent**:
+**Time spent**:30 minutes
 
 ---
 
