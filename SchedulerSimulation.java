@@ -3,7 +3,8 @@ import java.util.Queue;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Random;
-
+import java.util.ArrayList;
+import java.util.List;
 
 // ANSI Color Codes for enhanced terminal output
 class Colors {
@@ -28,6 +29,8 @@ class Colors {
 class Process implements Runnable {
     private String name; // Name of the process
     private int priority; //Priority level from 1 to 10 (10 = highest)
+    private long creationTime; //Time when the process was created
+    private long waitingTime; //Total waiting time
     private int burstTime; // Total time the process requires to complete (in milliseconds)
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
@@ -39,6 +42,8 @@ class Process implements Runnable {
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.priority = priority;
+        this.creationTime= System.currentTimeMillis();
+        this.waitingTime=0;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
     }
 
@@ -144,7 +149,18 @@ class Process implements Runnable {
       public int getPriority() {
         return priority;
     }
+    //Get the total waitng time
+  public long getWaitingTime() {
+        return waitingTime;
+    }
+//Calculate the total waiting time
+  public void calculateWaitingTime() {
+       long turnaroundTime=System.currentTimeMillis()-creationTime;
+      waitingTime=turnaroundTime-burstTime;
+    }
+    
 
+    
     // Check if the process has finished (i.e., no remaining time)
     public boolean isFinished() {
         return remainingTime <= 0;
@@ -174,7 +190,7 @@ public class SchedulerSimulation {
         
         // Map to associate each thread with its respective process object
         Map<Thread, Process> processMap = new HashMap<>();
-        
+        List<Process>allProcesses=new ArrayList<>();
         // Print simulation header with elegant formatting
         System.out.println("\n" + Colors.BOLD + Colors.BRIGHT_CYAN + 
                           "╔═══════════════════════════════════════════════════════════════════════════════════════╗" + 
@@ -212,6 +228,8 @@ public class SchedulerSimulation {
             
             // Add the process to the ready queue and the map
             addProcessToQueue(process, processQueue, processMap);
+
+            allProcesses.add(process);
         }
         
         // Start of the scheduler simulation
@@ -278,8 +296,25 @@ public class SchedulerSimulation {
                     process.runToCompletion(); // Run until the process completes
                 }
             }
+            if (process.isFinished()){process.calculateWaitingTime();}
         }
         System.out.println("Total Context Switches: " +contextSwitches);
+
+        System.out.println("\n========== Process Summary ==========");
+System.out.printf("%-15s %-15s %-15s %-20s%n",
+        "Process Name", "Burst Time", "Waiting Time", "Turnaround Time");
+
+for (Process process : allProcesses) {
+    long turnaroundTime = process.getWaitingTime() + process.getBurstTime();
+
+    System.out.printf("%-15s %-15d %-15d %-20d%n",
+            process.getName(),
+            process.getBurstTime(),
+            process.getWaitingTime(),
+            turnaroundTime);
+}
+
+System.out.println("======================================");
         
         // End of the scheduler simulation
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
@@ -302,6 +337,7 @@ public class SchedulerSimulation {
         
         // Add the thread to the ready queue
         processQueue.add(thread);
+
         
         // Map the thread to the process, so we can track the process associated with each thread
         processMap.put(thread, process);
