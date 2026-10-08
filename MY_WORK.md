@@ -33,7 +33,7 @@
 | **Student ID** | 446052702 |
 | **University Email** | 446052702@std.psau.edu.sa |
 | **GitHub Username** | JanaWesam |
-| **Repository Link** | [Paste your repository link here] |
+| **Repository Link** | (https://github.com/JanaWesam/OS-Assignment1-Jana-Wesam) |
  
 ---
 
