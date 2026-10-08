@@ -168,16 +168,16 @@
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 9,2026]
+**What I did**:Implemented Feature 3: Waiting Time and Turnaround Time
 
-**Details**:
+**Details**:I added creation time and waiting time tracking for each process. I used System.currentTimeMillis() to calculate the waiting time after a process finished. I also added a final summary table showing the Process Name, Burst Time, Waiting Time, and Turnaround Time
 
-**Challenges**:
+**Challenges**:I had difficulty understanding when the waiting time should be calculated because the processes run in multiple rounds
 
-**Solution**:
+**Solution**:I calculated the waiting time after each process finished and used the required formula for turnaround time: Waiting Time + Burst Time. I then ran the program and checked the final summary table
 
-**Time spent**:
+**Time spent**:2 hours
 
 ---
 
