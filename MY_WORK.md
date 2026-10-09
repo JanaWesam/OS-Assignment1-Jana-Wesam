@@ -293,7 +293,7 @@ I learned that multithreading allows a program to use multiple threads to perfor
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+A process has its own memory, while threads in the same process share memory. Threads usually use fewer resources than processes. In my assignment, the `Process` class represents a simulated process. The code `new Thread(process)` creates a thread to run it. I use `start()` to start the thread and `join()` to wait for it to finish
 
 ## Question 2: Ready Queue Behavior
 
@@ -305,15 +305,40 @@ I learned that multithreading allows a program to use multiple threads to perfor
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+When a process does not finish within its time quantum, it goes to the end of the ready queue. In my program, P1 returned to the queue 2 times before it finished. Other processes can run while P1 waits. This makes scheduling fair because each process gets a chance to use the CPU.
 
 Example from my output:
-```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
-```
+ ? P1 executing quantum [2000ms] 
 
+  ? Quantum progress: [???????????????] 20%
+  ? Quantum progress: [???????????????] 40%
+  ? Quantum progress: [???????????????] 60%
+  ? Quantum progress: [???????????????] 80%
+  ? Quantum progress: [???????????????] 100%
+  ? P1 completed quantum 2000ms ? Overall progress: [????????????????????] 46%
+     Remaining time: 2285ms
+  ? P1 yields CPU for context switch
+
+  ? P1 added to ready queue ? Burst time: 4285ms ?Priority: 1
+
+  
+  ? P1 executing quantum [2000ms] 
+
+  ? Quantum progress: [???????????????] 20%
+  ? Quantum progress: [???????????????] 40%
+  ? Quantum progress: [???????????????] 60%
+  ? Quantum progress: [???????????????] 80%
+  ? Quantum progress: [???????????????] 100%
+  ? P1 completed quantum 2000ms ? Overall progress: [????????????????????] 93%
+     Remaining time: 285ms
+  ? P1 yields CPU for context switch
+
+  ? P1 added to ready queue ? Burst time: 4285ms ?Priority: 1
+
+  
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+P1 used its first time quantum of 2000 ms and had 2285 ms remaining. It was added to the ready queue again. After its second quantum, 285 ms remained, so it was re-queued a second time. P1 finished during its third turn. Re-queueing allows other processes to use the CPU while P1 waits, which makes scheduling fair
+
 
 ## Question 3: Thread Lifecycle
 
@@ -323,16 +348,17 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**:  P1 is in the New state when its thread is created in addProcessToQueue() using new Thread(process)
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**:P1 becomes Runnable when the scheduler calls P1.start()
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: P1 is Running when its run() method executes and it performs its work
+4. 
+5. **Waiting**: P1 enters a waiting state when Thread.sleep() pauses its execution. The main thread also waits when it calls join()
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+6. **Terminated**:  P1 enters the Terminated state when its run() method finishes executing
 
-5. **Terminated**: [When is P1 Terminated?]
-
+   
 ## Question 4: Real-World Applications
 
 **Question**: Give **TWO** real-world examples where Round-Robin scheduling with threads would be useful. **At least one** must be an operating-system-level scenario (e.g., how an OS scheduler shares CPU time among running programs). The second can be any application you choose. For each, explain what the system is and **why Round-Robin fits** (fairness, responsiveness, predictability).
