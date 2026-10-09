@@ -237,7 +237,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+I learned that multithreading allows a program to use multiple threads to perform tasks. The Runnable interface defines the work that a thread performs. The Thread.start() method starts a new thread so that its run() method can execute. The Thread.sleep() method pauses the current thread for a short time. The Thread.join() method allows one thread to wait for another thread to finish. This assignment introduced me to how Java threads are used in a CPU scheduling simulation
 
 ## Question 2: What was the most challenging part of this assignment?
 
