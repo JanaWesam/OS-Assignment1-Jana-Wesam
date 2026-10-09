@@ -367,21 +367,21 @@ P1 used its first time quantum of 2000 ms and had 2285 ms remaining. It was adde
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): [CPU Scheduling]
 
 **Description**:
-[Describe the real-world scenario.]
+An operating system uses Round-Robin scheduling to share CPU time among running processes. Each process gets a small amount of CPU time called a time quantum. If a process does not finish, it goes to the end of the ready queue. A context switch allows the CPU to run another process.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin is fair because every process gets a chance to use the CPU. It improves responsiveness because processes do not have to wait for one process to finish completely. The time quantum helps organize CPU tim
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Web Server Handling Requests]
 
 **Description**:
-[Describe the real-world scenario or application.]
+A web server may use Round-Robin scheduling to give CPU time to threads handling different user requests. Each thread gets a time quantum to work on its request. If it does not finish, another thread gets a chance, and a context switch occurs when the CPU switches between threads.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-Robin helps prevent one thread from using all the CPU time. It allows multiple requests to make progress and improves responsiveness for users. This is useful when many users access the server at the same time.
 
 ## Summary
 
