@@ -182,15 +182,18 @@
 ---
 
 ### Entry 5 - [Date and Time]
-**What I did**:
+**What I did**:Completed the reflection and technical answers.
 
-**Details**:
+**Details**:    Wrote my answers about multithreading and the challenges I faced.
+                Explained the thread lifecycle 
+                Used my program output to explain Round-Robin scheduling.
+                Reviewed my answers and completed the development log summary.
 
-**Challenges**:
+**Challenges**:I found it difficult to understand some technical concepts and organize my answers correctly.
 
-**Solution**:
+**Solution**:I reviewed the assignment instructions and worked through each question step by step.
 
-**Time spent**:
+**Time spent**:4 hours
 
 ---
 
@@ -211,13 +214,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [10 hours]
 
-**Most challenging part**:
+**Most challenging part**:The most challenging part was learning how to use GitHub and Visual Studio Code while understanding the Java code and implementing the required features.
 
-**Most interesting learning**:
+**Most interesting learning**:I learned how Java threads work and how Round-Robin scheduling gives processes turns to use the CPU. I also learned how to track context switches and waiting time.
 
-**What I would do differently next time**:
+**What I would do differently next time**: I would start earlier, read all the instructions carefully, and divide the assignment into smaller tasks. I would also update my development log and commit my changes after each work session.
 
 ---
 
@@ -245,15 +248,15 @@ I learned that multithreading allows a program to use multiple threads to perfor
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
-
+The most challenging part of this assignment was the whole process. I was new to GitHub and Visual Studio Code, so I needed time to learn how to use them. Understanding the Java code and how threads work was also difficult for me. I sometimes felt confused when making changes and checking the output. 
 ## Question 3: How did you overcome the challenges you faced?
 
 > 💡 **TIP:** Describe your method: reading documentation, adding `System.out.println` to debug, re-reading the README, testing after each small change, asking for help.
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+I overcame the challenges by working on the assignment step by step. I followed the instructions in the README file and asked for help when I did not understand something. I learned how to use GitHub to save and upload my changes. I also used Visual Studio Code to edit and run my Java program. When I faced problems, I checked the code and ran the program again to test my changes. This helped me understand the assignment better and become more comfortable with programming tools.
+
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +264,7 @@ I learned that multithreading allows a program to use multiple threads to perfor
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+Multithreading is useful in many real-world applications. For example, a Quran application can play recitation while displaying the verses on the screen. Another thread can download audio files while the user continues using the application. This helps the application perform multiple tasks without freezing the screen. In my assignment, I learned how threads perform tasks and share CPU time. These concepts helped me understand how multithreading can make applications more responsive.
 
 ### Optional: What would you like to learn more about?
 
@@ -386,13 +389,13 @@ Round-Robin helps prevent one thread from using all the CPU time. It allows mult
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.    I learned how threads work in Java using start(), join(), and sleep()
+2.    I understood how Round-Robin scheduling shares CPU time fairly between processes.
+3.    I learned about context switches and how to calculate waiting time and turnaround time.
 
 **Concepts I need to study more:**
-1.
-2.
+1.    Understanding thread lifecycle states
+2.    Understanding how context switches happen during CPU scheduling.
 
 ---
 
