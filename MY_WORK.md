@@ -181,7 +181,7 @@
 
 ---
 
-### Entry 5 - [Date and Time]
+### Entry 5 - [October 10,2026]
 **What I did**:Completed the reflection and technical answers.
 
 **Details**:    Wrote my answers about multithreading and the challenges I faced.
@@ -240,7 +240,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-I learned that multithreading allows a program to use multiple threads to perform tasks. The Runnable interface defines the work that a thread performs. The Thread.start() method starts a new thread so that its run() method can execute. The Thread.sleep() method pauses the current thread for a short time. The Thread.join() method allows one thread to wait for another thread to finish. This assignment introduced me to how Java threads are used in a CPU scheduling simulation
+Before this assignment, I did not fully understand how threads work in Java. I learned that a thread can execute a specific task inside a program. I also learned that the Runnable interface defines the task, while Thread.start() begins its execution. Another important thing I learned is that Thread.join() allows the main thread to wait until another thread finishes. I understood that Thread.sleep() pauses the current thread for a period of time. Overall, this assignment helped me connect the concepts I studied in Operating Systems with a practical Java program.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -248,14 +248,15 @@ I learned that multithreading allows a program to use multiple threads to perfor
 
 **Your Answer:** *(5-7 sentences)*
 
-The most challenging part of this assignment was the whole process. I was new to GitHub and Visual Studio Code, so I needed time to learn how to use them. Understanding the Java code and how threads work was also difficult for me. I sometimes felt confused when making changes and checking the output. 
+The most challenging part of this assignment was understanding the Java code and making changes to it. At first, I found it difficult to understand how the different methods worked together. I also needed time to become familiar with GitHub and Visual Studio Code. Implementing the features required me to understand the code before changing it. Sometimes, I needed to run the program again to check whether my changes worked correctly. This experience taught me that understanding the existing code is important before adding new features.
+
 ## Question 3: How did you overcome the challenges you faced?
 
 > 💡 **TIP:** Describe your method: reading documentation, adding `System.out.println` to debug, re-reading the README, testing after each small change, asking for help.
 
 **Your Answer:** *(5-7 sentences)*
 
-I overcame the challenges by working on the assignment step by step. I followed the instructions in the README file and asked for help when I did not understand something. I learned how to use GitHub to save and upload my changes. I also used Visual Studio Code to edit and run my Java program. When I faced problems, I checked the code and ran the program again to test my changes. This helped me understand the assignment better and become more comfortable with programming tools.
+I overcame the challenges by working on the assignment step by step. I followed the README instructions to understand what I needed to do. When I did not understand something, I asked for help and reviewed the explanation. I learned how to edit my Java code and save my changes on GitHub. I also ran the program after making changes to check the results. Working on each feature separately helped me understand the assignment better. This experience made me more confident in learning new programming concepts.
 
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
@@ -356,10 +357,10 @@ P1 used its first time quantum of 2000 ms and had 2285 ms remaining. It was adde
 2. **Runnable**:P1 becomes Runnable when the scheduler calls P1.start()
 
 3. **Running**: P1 is Running when its run() method executes and it performs its work
-4. 
-5. **Waiting**: P1 enters a waiting state when Thread.sleep() pauses its execution. The main thread also waits when it calls join()
 
-6. **Terminated**:  P1 enters the Terminated state when its run() method finishes executing
+4. **Waiting**: P1 enters a waiting state when Thread.sleep() pauses its execution. The main thread also waits when it calls join()
+
+5. **Terminated**:  P1 enters the Terminated state when its run() method finishes executing
 
    
 ## Question 4: Real-World Applications
@@ -376,7 +377,7 @@ P1 used its first time quantum of 2000 ms and had 2285 ms remaining. It was adde
 An operating system uses Round-Robin scheduling to share CPU time among running processes. Each process gets a small amount of CPU time called a time quantum. If a process does not finish, it goes to the end of the ready queue. A context switch allows the CPU to run another process.
 
 **Why Round-Robin works well here**:
-Round-Robin is fair because every process gets a chance to use the CPU. It improves responsiveness because processes do not have to wait for one process to finish completely. The time quantum helps organize CPU tim
+Round-Robin is fair because every process gets a chance to use the CPU. It improves responsiveness because processes do not have to wait for one process to finish completely. The time quantum helps organize CPU time
 
 ### Example 2: [Web Server Handling Requests]
 
