@@ -440,9 +440,9 @@ Round-Robin helps prevent one thread from using all the CPU time. It allows mult
 - ✅ No section headers deleted
 
 **Video**
-- [ ] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
-- [ ] Shows your name, ID, repository, 3 features, IDE execution, one threading concept, and commit history
-- [ ] Link is **public** (tested in an incognito window) and pasted in the **Video Link** section above
+- ✅ 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
+- ✅ Shows your name, ID, repository, 3 features, IDE execution, one threading concept, and commit history
+- ✅ Link is **public** (tested in an incognito window) and pasted in the **Video Link** section above
 
 **Blackboard**
 - [ ] Submit **only** the link to your public GitHub repository
