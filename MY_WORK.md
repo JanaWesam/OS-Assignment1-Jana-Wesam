@@ -214,7 +214,7 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [10 hours]
+**Total time spent on assignment**: [12 hours]
 
 **Most challenging part**:The most challenging part was learning how to use GitHub and Visual Studio Code while understanding the Java code and implementing the required features.
 
@@ -339,6 +339,16 @@ Example from my output:
 
   ? P1 added to ready queue ? Burst time: 4285ms ?Priority: 1
 
+  ? P1 executing quantum [769ms] 
+
+  ? Quantum progress: [???????????????] 20%
+  ? Quantum progress: [???????????????] 40%
+  ? Quantum progress: [???????????????] 60%
+  ? Quantum progress: [???????????????] 80%
+  ? Quantum progress: [???????????????] 100%
+  ? P1 completed quantum 769ms ? Overall progress: [????????????????????] 100%
+     Remaining time: 0ms
+  ? P1 finished execution!
   
 **Explanation of example:**
 P1 used its first time quantum of 2000 ms and had 2285 ms remaining. It was added to the ready queue again. After its second quantum, 285 ms remained, so it was re-queued a second time. P1 finished during its third turn. Re-queueing allows other processes to use the CPU while P1 waits, which makes scheduling fair
@@ -352,15 +362,15 @@ P1 used its first time quantum of 2000 ms and had 2285 ms remaining. It was adde
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**:  P1 is in the New state when its thread is created in addProcessToQueue() using new Thread(process)
+1. **New**:P1’s thread is created using new Thread(process) in addProcessToQueue()
 
-2. **Runnable**:P1 becomes Runnable when the scheduler calls P1.start()
+2. **Runnable**: P1 becomes ready to run when the scheduler calls start().
 
-3. **Running**: P1 is Running when its run() method executes and it performs its work
+3. **Running**:P1 executes its run() method when the thread gets CPU time
 
-4. **Waiting**: P1 enters a waiting state when Thread.sleep() pauses its execution. The main thread also waits when it calls join()
+4. **Waiting**:P1 enters TIMED_WAITING when Thread.sleep() pauses it. The main thread waits for P1 when it calls join()
 
-5. **Terminated**:  P1 enters the Terminated state when its run() method finishes executing
+5. **Terminated**:P1’s thread finishes when its run() method ends
 
    
 ## Question 4: Real-World Applications
@@ -371,7 +381,7 @@ P1 used its first time quantum of 2000 ms and had 2285 ms remaining. It was adde
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [CPU Scheduling]
+### Example 1 (operating-system level):CPU Scheduling
 
 **Description**:
 An operating system uses Round-Robin scheduling to share CPU time among running processes. Each process gets a small amount of CPU time called a time quantum. If a process does not finish, it goes to the end of the ready queue. A context switch allows the CPU to run another process.
@@ -379,7 +389,7 @@ An operating system uses Round-Robin scheduling to share CPU time among running 
 **Why Round-Robin works well here**:
 Round-Robin is fair because every process gets a chance to use the CPU. It improves responsiveness because processes do not have to wait for one process to finish completely. The time quantum helps organize CPU time
 
-### Example 2: [Web Server Handling Requests]
+### Example 2:Web Server Handling Requests
 
 **Description**:
 A web server may use Round-Robin scheduling to give CPU time to threads handling different user requests. Each thread gets a time quantum to work on its request. If it does not finish, another thread gets a chance, and a context switch occurs when the CPU switches between threads.
@@ -405,29 +415,29 @@ Round-Robin helps prevent one thread from using all the CPU time. It allows mult
 > ⚠️ **WARNING:** Go through every line. Late submission costs **-1 mark per day**, and the deadline is **October 10, 2026**.
 
 **Repository**
-- [ ] Repository is **PUBLIC** (Settings → Danger Zone → Visibility)
-- [ ] Repository is renamed to `OS-Assignment1-YourFirstName-YourLastName`
-- [ ] GitHub account uses the university email (`@std.psau.edu.sa`)
+- ✅ Repository is **PUBLIC** (Settings → Danger Zone → Visibility)
+- ✅ Repository is renamed to `OS-Assignment1-YourFirstName-YourLastName`
+- ✅ GitHub account uses the university email (`@std.psau.edu.sa`)
 
 **Code**
-- [ ] Student ID is set in `SchedulerSimulation.java` (line 150)
-- [ ] Code compiles and runs with no errors
-- [ ] Feature 1 (priority), Feature 2 (context switches) and Feature 3 (waiting time table) all work
-- [ ] Each feature has clear comments
+- ✅ Student ID is set in `SchedulerSimulation.java` (line 150)
+- ✅ Code compiles and runs with no errors
+- ✅ Feature 1 (priority), Feature 2 (context switches) and Feature 3 (waiting time table) all work
+- ✅ Each feature has clear comments
 
 **Commits**
-- [ ] **At least 3 meaningful commits, ideally 6 or more**
-- [ ] **One commit per feature**
-- [ ] Commits are spread over **different dates** (not all in the last hour)
-- [ ] Everything is **pushed** to GitHub
+- ✅ **At least 3 meaningful commits, ideally 6 or more**
+- ✅ **One commit per feature**
+- ✅ Commits are spread over **different dates** (not all in the last hour)
+- ✅ Everything is **pushed** to GitHub
 
 **This file (`MY_WORK.md`)**
-- [ ] Full name and student ID filled in at the top
-- [ ] Development log has **5+ entries** on different dates
-- [ ] Reflection: 4 questions, 5-7 sentences each
-- [ ] Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
-- [ ] No `[...]` placeholders left
-- [ ] No section headers deleted
+- ✅ Full name and student ID filled in at the top
+- ✅ Development log has **5+ entries** on different dates
+- ✅ Reflection: 4 questions, 5-7 sentences each
+- ✅ Technical answers: 4 questions, 3-5 sentences each, with examples from **your** output
+- ✅ No `[...]` placeholders left
+- ✅ No section headers deleted
 
 **Video**
 - [ ] 2-3 minutes long, named `StudentID_Assignment1_Demo.mp4`
